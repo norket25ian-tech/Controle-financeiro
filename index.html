@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle financeiro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+    <main>
+        <h1>Controle financeiro</h1>
+
+        <section>
+            <div id="cardSaldo">
+                <p>Saldo</p>
+                <p id="valorSaldo">R$</p>
+            </div>
+            <div id="cardEntradas">
+                <p>Entradas</p>
+                <p id="valorEntradas">R$</p>
+            </div>
+            <div id="cardSaidas">
+                <p>Saidas</p>
+                <p id="valorSaidas">R$</p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <input type="text" id="Descricao" placeholder="Descricao">
+            </div>
+            <div>
+                <input type="number" id="numeroadicionar" placeholder="Valor">
+            </div>
+            <div>
+                <select id="tipoTransacao" aria-label="Tipo da transacao">
+                    <option value="entrada">Entrad</option>
+                    <option value="saida">Saida</option>
+                </select>
+            </div>
+            <div>
+                <input type="button" value="+" id="botao" onclick="adicionar()">
+            </div>
+        </section>
+
+        <section>
+            <input type="button" value="Todas" id="filtroTodas">
+            <input type="button" value="Entradas" id="filtroEntradas">
+            <input type="button" value="Saidas" id="filtroSaidas">
+        </section>
+
+        <article id="LISTAVALORES">
+           <div id="Valores" aria-label="Lista de transacoes"></div>
+        </article>
+    </main>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
